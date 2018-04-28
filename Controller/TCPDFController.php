@@ -8,7 +8,7 @@
 
 namespace Vladmeh\Bundle\TCPDFBundle\Controller;
 
-require_once __DIR__.'/../vendor/tecnickcom/tcpdf/tcpdf.php';
+require_once __DIR__.'../../../../vendor/tecnickcom/tcpdf/tcpdf.php';
 
 class TCPDFController extends \TCPDF
 {
