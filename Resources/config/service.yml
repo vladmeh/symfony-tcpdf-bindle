@@ -1,5 +1,5 @@
 parameters:
-    vladmeh.tcpdf.class: \TCPDF
+    vladmeh.tcpdf.class: Vladmeh\Bundle\TCPDFBundle\Controller\TCPDFController
 
 services:
     tcpdf:
@@ -7,4 +7,4 @@ services:
         arguments: []
         public: true
 
-    \TCPDF: ~
+    Vladmeh\Bundle\TCPDFBundle\Controller\TCPDFController: ~
