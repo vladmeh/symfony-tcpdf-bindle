@@ -1,0 +1,10 @@
+parameters:
+    vladmeh.tcpdf.class: \TCPDF
+
+services:
+    tcpdf:
+        class: "%vladmeh.tcpdf.class%"
+        arguments: []
+        public: true
+
+    \TCPDF: ~
