@@ -4,7 +4,26 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services
         http://symfony.com/schema/dic/services/services-1.0.xsd">
 
+    <parameters>
+        <parameter key="tcpdf.construct.orientation">L</parameter>
+        <parameter key="tcpdf.construct.unit">mm</parameter>
+        <parameter key="tcpdf.construct.format">A5</parameter>
+        <parameter key="tcpdf.construct.unicode">true</parameter>
+        <parameter key="tcpdf.construct.encoding">UTF-8</parameter>
+        <parameter key="tcpdf.construct.diskcache">true</parameter>
+        <parameter key="tcpdf.construct.pdfa">false</parameter>
+    </parameters>
+
     <services>
-        <service id="tcpdf" class="Vladmeh\Bundle\TCPDFBundle\Controller\TCPDFController" public="true"/>
+        <service id="tcpdf" class="\TCPDF" public="true">
+            <file>%kernel.root_dir%/../vendor/tecnickcom/tcpdf/tcpdf.php</file>
+            <argument>%tcpdf.construct.orientation%</argument>
+            <argument>%tcpdf.construct.unit%</argument>
+            <argument>%tcpdf.construct.format%</argument>
+            <argument>%tcpdf.construct.unicode%</argument>
+            <argument>%tcpdf.construct.encoding%</argument>
+            <argument>%tcpdf.construct.diskcache%</argument>
+            <argument>%tcpdf.construct.pdfa%</argument>
+        </service>
     </services>
 </container>
