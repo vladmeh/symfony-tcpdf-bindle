@@ -5,6 +5,6 @@
         http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="vladmeh.tcpdf" class="Vladmeh\Bundle\TCPDFBundle\Controller\TCPDFController"/>
+        <service id="tcpdf" class="Vladmeh\Bundle\TCPDFBundle\Controller\TCPDFController" public="true"/>
     </services>
 </container>
