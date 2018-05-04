@@ -52,6 +52,8 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('k_thai_topchars')->defaultTrue()->end()
                         ->scalarNode('k_tcpdf_calls_in_html')->defaultFalse()->end()
                         ->scalarNode('k_tcpdf_external_config')->defaultTrue()->end()
+                        ->scalarNode('k_timezone')->defaultValue('UTC')->end()
+
                         ->scalarNode('head_magnification')->defaultValue(1.1)->end()
                         ->scalarNode('pdf_header_logo')->defaultValue('')->end()
                         ->scalarNode('pdf_header_logo_width')->defaultValue(0)->end()
@@ -62,17 +64,20 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('pdf_header_title')->defaultValue('')->end()
                         ->scalarNode('pdf_header_string')->defaultValue('')->end()
                         ->scalarNode('pdf_unit')->defaultValue('mm')->end()
+
                         ->scalarNode('pdf_margin_header')->defaultValue(5)->end()
                         ->scalarNode('pdf_margin_footer')->defaultValue(10)->end()
                         ->scalarNode('pdf_margin_top')->defaultValue(27)->end()
                         ->scalarNode('pdf_margin_bottom')->defaultValue(25)->end()
                         ->scalarNode('pdf_margin_left')->defaultValue(15)->end()
                         ->scalarNode('pdf_margin_right')->defaultValue(15)->end()
+
                         ->scalarNode('pdf_font_name_main')->defaultValue('helvetica')->end()
                         ->scalarNode('pdf_font_size_main')->defaultValue(10)->end()
                         ->scalarNode('pdf_font_name_data')->defaultValue('helvetica')->end()
                         ->scalarNode('pdf_font_size_data')->defaultValue(8)->end()
                         ->scalarNode('pdf_font_monospaced')->defaultValue('courier')->end()
+
                         ->scalarNode('pdf_image_scale_ratio')->defaultValue(1.25)->end()
                     ->end()
                 ->end()

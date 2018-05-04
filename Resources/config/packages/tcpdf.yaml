@@ -21,6 +21,7 @@ tcpdf:
 #        k_thai_topchars: true
 #        k_tcpdf_calls_in_html: false
 #        k_tcpdf_external_config: true
+#        k_timezone: 'UTC'
 #
 #        head_magnification: 1.1
 #        pdf_header_logo: ''
