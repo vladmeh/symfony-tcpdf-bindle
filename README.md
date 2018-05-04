@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vladmeh/symfony-tcpdf-bindle.svg?branch=master)](https://travis-ci.org/vladmeh/symfony-tcpdf-bindle)
+
 Installation
 ============
 
