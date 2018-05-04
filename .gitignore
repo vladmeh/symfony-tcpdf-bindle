@@ -5,4 +5,4 @@ gen
 composer.phar
 /vendor/
 composer.lock
-
+~*
