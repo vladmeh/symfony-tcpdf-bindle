@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('tcpdf');
         $rootNode
             ->children()
-                ->arrayNode('construct')
+                ->arrayNode('param')
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->scalarNode('orientation')->defaultValue('P')->end()
@@ -41,7 +41,7 @@ class Configuration implements ConfigurationInterface
                     ->children()
                         ->scalarNode('k_path_main')->defaultValue('%kernel.root_dir%/../vendor/tecnickcom/tcpdf/')->end()
                         ->scalarNode('k_path_url')->defaultValue('%kernel.root_dir%/../vendor/tecnickcom/tcpdf/')->end()
-                        ->scalarNode('k_path_fonts')->defaultValue('%kernel.root_dir%/../vendor/tecnickcom/tcpdf/fonts/')->end()
+                        ->scalarNode('k_path_fonts')->defaultFalse('%kernel.root_dir%/../vendor/tecnickcom/tcpdf/fonts/')->end()
                         ->scalarNode('k_path_images')->defaultValue('%kernel.root_dir%/../vendor/tecnickcom/tcpdf/examples/images/')->end()
                         ->scalarNode('k_path_cache')->defaultValue('%kernel.cache_dir%/tcpdf')->end()
                         ->scalarNode('k_path_url_cache')->defaultValue('%kernel.cache_dir%/tcpdf')->end()
