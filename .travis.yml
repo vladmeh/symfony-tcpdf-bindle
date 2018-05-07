@@ -1,25 +1,25 @@
+language: php
+
+sudo: false
 cache:
     directories:
-        - vendor
         - $HOME/.composer/cache/files
 
+php:
+  - 7.1
+  - 7.2
+  - nightly
+  - hhvm
+
 matrix:
-    include:
-        - php: 7.1
-        - php: 7.2
-        - php: nightly
-    fast_finish: true
+  allow_failures:
+    - php: nightly
+    - php: hhvm
 
-before_install:
-    # turn off XDebug
-    - phpenv config-rm xdebug.ini || return 0
+before_script:
+  - travis_retry composer self-update
+  - travis_retry composer update --no-interaction --prefer-source
 
-install:
-    - travis_retry composer install
-
-script: |
-    if [[ $TRAVIS_PHP_VERSION = 7.* || $TRAVIS_PHP_VERSION = nightly ]]; then
-        SYMFONY_PHPUNIT_VERSION=6.1 ./vendor/bin/simple-phpunit
-    else
-        ./vendor/bin/simple-phpunit
-    fi
+script:
+  - composer validate --strict --no-check-lock
+  - phpunit
