@@ -19,6 +19,8 @@ class TCPDFBundleTest extends TestCase
      */
     public function testSomething()
     {
+        fwrite(STDOUT, __METHOD__ . "\n");
+        //$this->expectOutputString('test');
         $this->assertTrue(true);
     }
 }

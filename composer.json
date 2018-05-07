@@ -20,6 +20,11 @@
   "autoload": {
     "psr-4": { "Vladmeh\\Bundle\\TCPDFBundle\\": "" }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Vladmeh\\Bundle\\TCPDFBundle\\Tests\\": "Tests/"
+    }
+  },
   "require-dev": {
     "phpunit/phpunit": "^7.1",
     "symfony/phpunit-bridge": "^4.0"

@@ -19,6 +19,8 @@ matrix:
 before_script:
   - travis_retry composer self-update
   - travis_retry composer update --no-interaction --prefer-source
+  - travis_retry composer dumputoload
 
 script:
-  - phpunit
+  - composer validate --strict --no-check-lock
+  - ./vendor/bin/phpunit
