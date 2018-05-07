@@ -21,5 +21,4 @@ before_script:
   - travis_retry composer update --no-interaction --prefer-source
 
 script:
-  - composer validate --strict --no-check-lock
   - ./vendor/bin/phpunit
