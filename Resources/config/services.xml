@@ -5,7 +5,7 @@
         http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="tcpdf" class="\TCPDF" public="true">
+        <service id="tcpdf" class="Vladmeh\Bundle\TCPDFBundle\Service\TcPdfService" public="true">
             <file>%kernel.root_dir%/../vendor/tecnickcom/tcpdf/tcpdf.php</file>
             <argument>%tcpdf.orientation%</argument>
             <argument>%tcpdf.unit%</argument>
