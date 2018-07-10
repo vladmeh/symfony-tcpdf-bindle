@@ -10,7 +10,7 @@
 namespace Vladmeh\Bundle\TCPDFBundle\Service;
 
 
-abstract class TcPdfService extends \TCPDF
+class TcPdfService extends \TCPDF
 {
     public function __construct()
     {
